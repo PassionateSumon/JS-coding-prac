@@ -261,3 +261,61 @@
 // }
 // console.log(missingRepeating(arr));
 
+// **22. Merge sort
+// const arr = [12, 11, 13, 5, 6, 7];
+// const mergeSort = (a) => {
+//   if (a.length <= 1) return a;
+//   const mid = Math.floor(a.length / 2);
+//   const left = mergeSort(a.slice(0, mid));
+//   const right = mergeSort(a.slice(mid));
+//   return merge(left, right);
+// };
+// const merge = (left, right) => {
+//   let ans = [],
+//     i = 0,
+//     j = 0;
+//   while (i < left.length && j < right.length) {
+//     if (left[i] < right[j]) {
+//       ans.push(left[i]);
+//       i++;
+//     } else {
+//       ans.push(right[j]);
+//       j++;
+//     }
+//   }
+//   return [...ans, ...left.slice(i), ...right.slice(j)];
+// };
+// console.log(mergeSort(arr));
+
+// **23. Quick sort 
+// const arr = [10, 7, 8, 9, 1, 5];
+// const quickSort = (a) => {
+//     if(a <= 1) return a;
+
+//     const pivot = a[a.length-1];
+//     const left = a.filter(i => i < pivot);
+//     const right = a.filter(i => i > pivot);
+//     const middle = a.filter(i => i === pivot);
+
+//     console.log(pivot, left, middle, right);
+
+//     return [...quickSort(left), ...middle, ...quickSort(right)];
+// }
+// console.log(quickSort(arr));
+
+// **24. Insertion sort
+// const arr = [12, 11, 13, 5, 6];
+// const insertionSort = (a) => {
+//     for(let i = 1; i < a.length; i++) {
+//         let key = a[i];
+//         let j = i-1;
+
+//         while(j >= 0 && a[j] > key) {
+//             a[j+1] = a[j];
+//             j--;
+//         }
+//         a[j+1] = key;
+//     }
+//     return a;
+// }
+// console.log(insertionSort(arr));
