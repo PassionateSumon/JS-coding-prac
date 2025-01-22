@@ -209,3 +209,55 @@
 // }
 // console.log(longestSubs(str));
 
+// **19. Find the majority element
+// const arr = [3, 3, 4, 2, 3, 3, 3];
+// const majorityElement = (a) => {
+//     let map = new Map();
+//     for(let i of a) {
+//         if(map.has(i)) {
+//             map.set(i, map.get(i)+1);
+//         } else {
+//             map.set(i,1);
+//         }
+//     }
+//     let tar = a.length/2;
+//     for(let [key, value] of map) {
+//         if(value >= tar) {
+//             return key;
+//         }
+//     }
+// }
+// console.log(majorityElement(arr));
+
+// **20. Rotate array by k position
+// const arr = [1,2,3,4,5];
+// const k = 12;
+// const rotateArray = (a,k) => {
+//     k = k % a.length;
+//     return [...a.slice(-k), ...a.slice(0, a.length-k)];
+// }
+// console.log(rotateArray(arr,k));
+
+// **21. Missing & Repeating
+// const arr = [1,3,3,4];
+// const missingRepeating = (a) => {
+//     const len = a.length;
+//     const actualSum = (len * (len+1))/2;
+//     const actualSqSum = (len * (len+1) * (2*len+1))/6;
+//     let currSum = 0, currSqSum = 0;
+
+//     for(let i of a) {
+//         currSum += i;
+//         currSqSum += i*i;
+//     }
+
+//     const diffSum = actualSum - currSum;
+//     const diffSqSum = actualSqSum - currSqSum;
+
+//     const missingNum = (diffSum + diffSqSum/diffSum)/2;
+//     const repeatingNum = missingNum - diffSum;
+
+//     return {missingNum, repeatingNum};
+// }
+// console.log(missingRepeating(arr));
+
